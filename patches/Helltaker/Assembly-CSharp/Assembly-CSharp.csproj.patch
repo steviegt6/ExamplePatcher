@@ -1,0 +1,11 @@
+--- src/decompiled/Assembly-CSharp/Assembly-CSharp.csproj
++++ src/Helltaker/Assembly-CSharp/Assembly-CSharp.csproj
+@@ -1,7 +_,7 @@
+ <Project Sdk="Microsoft.NET.Sdk">
+   <Import Project="../Configuration.targets" />
+   <PropertyGroup>
+-    <OutputType>WinExe</OutputType>
++    <OutputType>Library</OutputType>
+     <Version>0.0.0.0</Version>
+     <RootNamespace>Assembly-CSharp</RootNamespace>
+   </PropertyGroup>
