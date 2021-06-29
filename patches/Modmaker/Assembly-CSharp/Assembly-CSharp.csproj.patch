@@ -1,0 +1,18 @@
+--- src/Helltaker/Assembly-CSharp/Assembly-CSharp.csproj
++++ src/Modmaker/Assembly-CSharp/Assembly-CSharp.csproj
+@@ -10,6 +_,9 @@
+     <OutputName>$(OutputName)Server</OutputName>
+   </PropertyGroup>
+   <ItemGroup>
++    <PackageReference Include="MonoMod.RuntimeDetour" Version="21.6.21.1" />
++  </ItemGroup>
++  <ItemGroup>
+     <Reference Include="Assembly-CSharp-firstpass" />
+     <Reference Include="netstandard" />
+     <Reference Include="UnityEngine.AnimationModule" />
+@@ -21,5 +_,4 @@
+     <Reference Include="UnityEngine.TextRenderingModule" />
+     <Reference Include="UnityEngine.UI" />
+   </ItemGroup>
+-  <ItemGroup />
+ </Project>

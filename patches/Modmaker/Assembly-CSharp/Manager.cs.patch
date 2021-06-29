@@ -1,0 +1,96 @@
+--- src/Helltaker/Assembly-CSharp/Manager.cs
++++ src/Modmaker/Assembly-CSharp/Manager.cs
+@@ -1,6 +_,11 @@
++using MonoMod.RuntimeDetour;
++using System;
+ using System.Collections;
+ using System.IO;
++using System.Reflection;
+ using UnityEngine;
++using Object = UnityEngine.Object;
++using Random = UnityEngine.Random;
+ 
+ public class Manager : MonoBehaviour
+ {
+@@ -32,6 +_,7 @@
+ 	public bool steam;
+ 
+ 	private void Awake() {
++		ManipulateLineReading();
+ 		if (instance == null)
+ 			instance = this;
+ 		else if (instance != this)
+@@ -187,5 +_,73 @@
+ 		sinLoopSource.Play();
+ 		sinLoopSource.mute = true;
+ 		amdStatus = false;
++	}
++
++	public void ManipulateLineReading() {
++		new Hook(
++			typeof(File).GetMethod(nameof(File.ReadAllLines), BindingFlags.Public | BindingFlags.Static, null,
++				new[] {typeof(string)}, null),
++			GetType().GetMethod(nameof(Degenerate), BindingFlags.Public | BindingFlags.Static)).Apply();
++	}
++
++	private static string[] CursedStrings => new[] {
++		" uwu",
++		" UwU",
++		" owo",
++		" OwO",
++		" >w<",
++		" >//w//<",
++		" .w.",
++		" _w_",
++		" QwQ",
++		" qwq",
++		" rawr",
++		" x3",
++		" ;3",
++		" :3",
++		" -_-",
++		" vwv",
++		" VwV",
++		"...",
++		"~~",
++		"~",
++		"!~",
++		"!!",
++		",,,",
++		",.,",
++	};
++
++	private static readonly System.Random Rand = new System.Random();
++
++	public static string[] Degenerate(Func<string, string[]> orig, string path) {
++		bool Bool() => Rand.Next(1) == 0;
++
++		string[] array = orig(path);
++
++		for (int i = 0; i < array.Length; i++) {
++			string text = array[i];
++
++			// god is dead
++			text = text.Replace('r', 'w')
++				.Replace('R', 'W')
++				.Replace("ove", "uv")
++				.Replace("OVE", "UV")
++				.Replace("oo", "owo")
++				.Replace("OO", "OwO")
++				.Replace("u", "uwu")
++				.Replace("uu", "uwu")
++				.Replace("U", "UwU")
++				.Replace("UU", "UwU")
++				.Replace("l", "w")
++				.Replace("L", "W")
++				.Replace("th", Bool() ? "d" : "ff")
++				.Replace("Th", Bool() ? "D" : "FF")
++				.Replace("TH", Bool() ? "D" : "FF");
++
++			text += CursedStrings[Rand.Next(CursedStrings.Length)];
++			array[i] = text;
++		}
++
++		return array;
+ 	}
+ }
