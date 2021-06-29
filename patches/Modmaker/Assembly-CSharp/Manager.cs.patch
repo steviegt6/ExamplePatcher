@@ -20,7 +20,7 @@
  		if (instance == null)
  			instance = this;
  		else if (instance != this)
-@@ -187,5 +_,73 @@
+@@ -187,5 +_,69 @@
  		sinLoopSource.Play();
  		sinLoopSource.mute = true;
  		amdStatus = false;
@@ -75,19 +75,15 @@
 +				.Replace('R', 'W')
 +				.Replace("ove", "uv")
 +				.Replace("OVE", "UV")
-+				.Replace("oo", "owo")
-+				.Replace("OO", "OwO")
-+				.Replace("u", "uwu")
-+				.Replace("uu", "uwu")
-+				.Replace("U", "UwU")
-+				.Replace("UU", "UwU")
 +				.Replace("l", "w")
 +				.Replace("L", "W")
 +				.Replace("th", Bool() ? "d" : "ff")
 +				.Replace("Th", Bool() ? "D" : "FF")
 +				.Replace("TH", Bool() ? "D" : "FF");
 +
-+			text += CursedStrings[Rand.Next(CursedStrings.Length)];
++			if (Bool()) 
++				text += CursedStrings[Rand.Next(CursedStrings.Length)];
++
 +			array[i] = text;
 +		}
 +
