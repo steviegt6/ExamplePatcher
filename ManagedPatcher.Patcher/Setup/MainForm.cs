@@ -22,10 +22,10 @@ namespace ManagedPatcher.Patcher.Setup
 			InitializeComponent();
 
 			taskButtons[buttonDecompile] = () => new DecompileTask(this, "src/decompiled");
-			taskButtons[buttonDiffTerraria] = () => new DiffTask(this, "src/decompiled", "src/UnmodifiedAssembly", "patches/UnmodifiedAssembly", new ProgramSetting<DateTime>("TerrariaDiffCutoff"));
-			taskButtons[buttonPatchTerraria] = () => new PatchTask(this, "src/decompiled", "src/UnmodifiedAssembly", "patches/UnmodifiedAssembly", new ProgramSetting<DateTime>("TerrariaDiffCutoff"));
-			taskButtons[buttonDiffModLoader] = () => new DiffTask(this, "src/UnmodifiedAssembly", "src/ModifiedAssembly", "patches/ModifiedAssembly", new ProgramSetting<DateTime>("tModLoaderDiffCutoff"));
-			taskButtons[buttonPatchModLoader] = () => new PatchTask(this, "src/UnmodifiedAssembly", "src/ModifiedAssembly", "patches/ModifiedAssembly", new ProgramSetting<DateTime>("tModLoaderDiffCutoff"));
+			taskButtons[buttonDiffTerraria] = () => new DiffTask(this, "src/decompiled", "src/Helltaker", "patches/Helltaker", new ProgramSetting<DateTime>("TerrariaDiffCutoff"));
+			taskButtons[buttonPatchTerraria] = () => new PatchTask(this, "src/decompiled", "src/Helltaker", "patches/Helltaker", new ProgramSetting<DateTime>("TerrariaDiffCutoff"));
+			taskButtons[buttonDiffModLoader] = () => new DiffTask(this, "src/Helltaker", "src/Modmaker", "patches/Modmaker", new ProgramSetting<DateTime>("tModLoaderDiffCutoff"));
+			taskButtons[buttonPatchModLoader] = () => new PatchTask(this, "src/Helltaker", "src/Modmaker", "patches/Modmaker", new ProgramSetting<DateTime>("tModLoaderDiffCutoff"));
 
 			taskButtons[buttonRegenSource] = () =>
 				new RegenSourceTask(this, new[] { buttonPatchTerraria, buttonPatchModLoader }

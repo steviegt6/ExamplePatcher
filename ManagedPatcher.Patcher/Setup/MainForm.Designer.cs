@@ -126,8 +126,8 @@ namespace ManagedPatcher.Patcher.Setup
             this.buttonDiffTerraria.Name = "buttonDiffTerraria";
             this.buttonDiffTerraria.Size = new System.Drawing.Size(129, 23);
             this.buttonDiffTerraria.TabIndex = 4;
-            this.buttonDiffTerraria.Text = "Diff Unmodified";
-            this.toolTipButtons.SetToolTip(this.buttonDiffTerraria, "Recalculates the patches of the Unmodified assembly\r\nDiffs the src/UnmodifiedAssembly directory\r\nUsed for fix" +
+            this.buttonDiffTerraria.Text = "Diff Helltaker";
+            this.toolTipButtons.SetToolTip(this.buttonDiffTerraria, "Recalculates the patches of Helltaker\r\nDiffs the src/Helltaker directory\r\nUsed for fix" +
         "ing decompilation errors\r\n");
             this.buttonDiffTerraria.UseVisualStyleBackColor = true;
             this.buttonDiffTerraria.Click += new System.EventHandler(this.buttonTask_Click);
@@ -140,9 +140,9 @@ namespace ManagedPatcher.Patcher.Setup
             this.buttonPatchTerraria.Name = "buttonPatchTerraria";
             this.buttonPatchTerraria.Size = new System.Drawing.Size(129, 23);
             this.buttonPatchTerraria.TabIndex = 2;
-            this.buttonPatchTerraria.Text = "Patch Unmodified";
+            this.buttonPatchTerraria.Text = "Patch Helltaker";
             this.toolTipButtons.SetToolTip(this.buttonPatchTerraria, "Applies patches to fix decompilation errors\r\nLeaves functionality unchanged\r\nPatched " +
-        "source is located in src/UnmodifiedAssembly");
+        "source is located in src/Helltaker");
             this.buttonPatchTerraria.UseVisualStyleBackColor = true;
             this.buttonPatchTerraria.Click += new System.EventHandler(this.buttonTask_Click);
             // 
@@ -154,9 +154,9 @@ namespace ManagedPatcher.Patcher.Setup
             this.buttonPatchModLoader.Name = "buttonPatchModLoader";
             this.buttonPatchModLoader.Size = new System.Drawing.Size(129, 23);
             this.buttonPatchModLoader.TabIndex = 3;
-            this.buttonPatchModLoader.Text = "Patch Modified";
-            this.toolTipButtons.SetToolTip(this.buttonPatchModLoader, "Applies Modified assembly patches to the Unmodified assembly\r\nEdit the source code in src/ModifiedAssembly af" +
-        "ter this phase\r\nInternally formats the Modified assembly sources before patching");
+            this.buttonPatchModLoader.Text = "Patch Modmaker";
+            this.toolTipButtons.SetToolTip(this.buttonPatchModLoader, "Applies Modmaker patches to Helltaker\r\nEdit the source code in src/Modmaker af" +
+        "ter this phase\r\nInternally formats the Helltaker assembly sources before patching");
             this.buttonPatchModLoader.UseVisualStyleBackColor = true;
             this.buttonPatchModLoader.Click += new System.EventHandler(this.buttonTask_Click);
             // 
@@ -168,7 +168,7 @@ namespace ManagedPatcher.Patcher.Setup
             this.buttonDiffModLoader.Name = "buttonDiffModLoader";
             this.buttonDiffModLoader.Size = new System.Drawing.Size(129, 23);
             this.buttonDiffModLoader.TabIndex = 5;
-            this.buttonDiffModLoader.Text = "Diff Modified";
+            this.buttonDiffModLoader.Text = "Diff Modmaker";
             this.toolTipButtons.SetToolTip(this.buttonDiffModLoader, resources.GetString("buttonDiffModLoader.ToolTip"));
             this.buttonDiffModLoader.UseVisualStyleBackColor = true;
             this.buttonDiffModLoader.Click += new System.EventHandler(this.buttonTask_Click);

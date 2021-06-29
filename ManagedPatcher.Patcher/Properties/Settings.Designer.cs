@@ -61,7 +61,7 @@ namespace ManagedPatcher.Patcher.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.0.0.0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.0.0.0")]
         public string ClientVersion {
             get {
                 return ((string)(this["ClientVersion"]));
@@ -70,7 +70,7 @@ namespace ManagedPatcher.Patcher.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.0.0.0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.0.0.0")]
         public string ServerVersion {
             get {
                 return ((string)(this["ServerVersion"]));

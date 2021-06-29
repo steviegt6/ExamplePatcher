@@ -122,7 +122,7 @@
   </metadata>
   <data name="buttonDiffModLoader.ToolTip" xml:space="preserve">
     <value>Recalculates the ManagedPatcher patches
-Diffs the src/UnmodifiedAssembly and src/ModifiedAssembly directories
+Diffs the src/Helltaker and src/Modmaker directories
 Use this after making changes then commit the patches directory to the git
 Internally formats the Unmodified assembly sources before diffing
 
