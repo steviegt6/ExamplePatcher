@@ -63,7 +63,7 @@
 +	private static readonly System.Random Rand = new System.Random();
 +
 +	public static string[] Degenerate(Func<string, string[]> orig, string path) {
-+		bool Bool() => Rand.Next(1) == 0;
++		bool Bool() => Rand.Next(2) == 0;
 +
 +		string[] array = orig(path);
 +
